@@ -22,5 +22,5 @@ const nuevoUsuario = new User({
 const creaUsuario = async (req, res) => {
     await nuevoUsuario.save();
 }
-
-module.exports = {User /*, creaUsuario*/ };
+module.exports = User;
+// module.exports = {User /*, creaUsuario*/ };

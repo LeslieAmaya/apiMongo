@@ -1,4 +1,4 @@
-const  {User, creaUsuario} = require('../models/user.model');
+const  User = require('../models/user.model');
 
 exports.login = async (req, res) => { //Espera peticion y devuelve respuesta
     const {username, password } = req.body;
