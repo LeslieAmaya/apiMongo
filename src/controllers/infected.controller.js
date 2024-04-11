@@ -12,7 +12,8 @@ exports.createInfected = async (req, res) => {
 
 exports.getAllInfected = async (req, res) => {
   try {
-    const infected = await Infected.find();
+    // console.log(await Infected.find().populate("state"));
+    const infected = await Infected.find().populate("state");
     res.json(infected);
   } catch (err) {
     res.status(500).json({ message: err.message });

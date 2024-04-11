@@ -6,7 +6,6 @@ const infectedSchema = new mongoose.Schema({
   },
   age: {
     type: String,
-    unique: true,
     required: true,
   },
   gender: {
