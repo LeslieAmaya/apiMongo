@@ -46,9 +46,10 @@ exports.updateInfected = async (req, res) => {
 
 exports.deleteInfected = async (req, res) => {
   try {
-    await Infected.findByIdAndRemove(req.params.id);
+    await Infected.findByIdAndDelete(req.params.id);
     res.json({ message: "Infected person deleted" });
   } catch (err) {
+    console.log(err.message);
     res.status(500).json({ message: err.message });
   }
 };
