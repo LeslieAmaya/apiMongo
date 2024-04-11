@@ -1,0 +1,17 @@
+32 estados
+
+Mes - Año
+  Entidad > cantidad de infectados
+        > edad
+        > sexo
+        > fecha de deteccion
+        > total de defunciones
+
+Campañas de vacunacion 2024 c:
+  Catalogo
+
+
+Pagina movimiento
+  Graficas
+    > cantidad de infectados
+    > defunciones
