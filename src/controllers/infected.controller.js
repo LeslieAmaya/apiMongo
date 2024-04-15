@@ -12,7 +12,7 @@ exports.createInfected = async (req, res) => {
 
 exports.getAllInfected = async (req, res) => {
   try {
-    // console.log(await Infected.find().populate("state"));
+    console.log(await Infected.find());
     const infected = await Infected.find().populate("state");
     res.json(infected);
   } catch (err) {

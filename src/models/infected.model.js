@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
 const infectedSchema = new mongoose.Schema({
-  name: {
-    type: String,
-  },
   age: {
-    type: String,
+    type: Number,
     required: true,
   },
   gender: {

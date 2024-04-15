@@ -3,6 +3,7 @@ const login = require("../controllers/login");
 const userController = require("../controllers/user.controller");
 const infectedController = require("../controllers/infected.controller");
 const stateController = require("../controllers/state.controller");
+const campainController = require("../controllers/campain.controller");
 
 const router = Router();
 //http://localhost/api/login - post {username: "Isael", password: "Isael123" }
@@ -26,5 +27,10 @@ router.put("/infected/:id", infectedController.updateInfected);
 router.get("/state", stateController.getAllStates);
 
 // Rutas catalogo de campañas
+router.post("/campain", campainController.createCampain);
+router.delete("/campain/:id", campainController.deleteCampain);
+router.put("/campain/:id", campainController.updateCampain);
+router.get("/campain", campainController.getAllCampain);
+router.get("/campain/:id", campainController.getCampainById);
 
 module.exports = router;
