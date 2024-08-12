@@ -21,7 +21,10 @@ exports.registerUser = async (req, res) => {
     const userData = req.body;
     const newUser = new User({
         username: userData.username,
-        password: userData.password
+        name: userData.name,
+        lastname: userData.lastname,
+        password: userData.password,
+        type: userData.type
     });
     await newUser
         .save()
@@ -34,7 +37,12 @@ exports.updateUser = async (req, res) => {
     const userData = req.body;
     
     await User
-        .updateOne({ _id: id }, { $set: { username: userData.username, password:userData.password } })
+        .updateOne({ _id: id }, { $set: { 
+            username: userData.username,
+            name: userData.name,
+            lastname: userData.lastname,
+            password: userData.password,
+            type: userData.type } })
         .then((data) => res.json(data)) //responde con los datos en caso de que se elimine
         .catch((error) => res.json({ message: error })); //nos devuelve el error en caso de que lo hubiera
 }
