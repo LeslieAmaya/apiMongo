@@ -5,7 +5,7 @@ const User = require("../models/user.model");
 exports.deleteUser = (req, res) => {
     const id = req.params.id; //nos trae el id de la url
 
-    User.deleteOne({ id : id }) //eliminar el unico usuario con el id
+    User.deleteOne({ username : id }) //eliminar el unico usuario con el id
         .then((data) => res.json(data)) //responde con los datos en caso de que se elimine
         .catch((error) => res.json({ message: error })); //nos devuelve el error en caso de que lo hubiera
 }
